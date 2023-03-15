@@ -3,6 +3,19 @@ using Xunit;
 
 namespace FormattingExercise
 {
+    public class Formatter
+    {
+        public static String Greet(String name)
+        {
+            return "Hello, " + name;
+        }
+        public static String FormatDate(int day, int month, int year)
+        {
+            DateTime dt = new DateTime(year, month, day);
+            return dt.ToString("dd/MM/yyyy");
+        }
+    }
+    
     public class UnitTests
     {
         [Fact]
